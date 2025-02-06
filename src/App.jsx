@@ -1,18 +1,18 @@
 import React from 'react'
-import { UserNavbar } from './user/component/UserNavbar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { User } from './user/route/User';
-import { Home } from 'lucide-react';
+
 
 export const App = () => {
   return (
     <>
-      <UserNavbar />
+    <div className='h-screen w-screen overflow-x-hidden overflow-y-auto'>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/*' element={<User />} />
         </Routes>
       </BrowserRouter>
+    </div>
     </>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Home = () => {
+export const HomePage = () => {
   return (
-    <div className='flex justify-center items-center'>Home</div>
+    <div className='h-[91vh] w-screen text-black flex justify-center items-center'>Home</div>
   )
 }
 
-export default Home;
+export default HomePage;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import UserNavbar from '../component/UserNavbar';
 import { Outlet } from 'react-router-dom';
 
@@ -8,7 +8,9 @@ export const WebLayout = () => {
         <div className='h-screen w-screen overflow-x-hidden'>
             <UserNavbar />
             <div className='h-[91vh] w-screen'>
-                <Outlet />
+                <Suspense fallback={"Loading..."} >
+                  <Outlet />
+                </Suspense>
             </div>
         </div>
     </>
