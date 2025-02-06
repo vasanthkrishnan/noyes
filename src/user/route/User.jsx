@@ -6,6 +6,7 @@ import About from '../pages/About'
 import Faculty from '../pages/Faculty'
 import Gallery from '../pages/Gallery'
 import Academics from '../pages/Academics'
+import Achievements from '../pages/Achievements'
 
 export const User = () => {
   return (
@@ -17,6 +18,7 @@ export const User = () => {
                   <Route path='faculty' element={<Faculty />} />
                   <Route path='gallery' element={ <Gallery />} />
                   <Route path='academics' element = { <Academics />} />
+                  <Route path='achievements' element = { <Achievements />} />
 
                   <Route path='*' element = { <Navigate to="/" replace />} />
                 </Route>

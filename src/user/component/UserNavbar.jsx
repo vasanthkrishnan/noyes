@@ -20,6 +20,10 @@ export const UserNavbar = () => {
             url : "/faculty",
         },
         {
+            title : "Achievements",
+            url : "/achievements",
+        },
+        {
             title : "Gallery",
             url : "/gallery",
         },
@@ -37,19 +41,19 @@ export const UserNavbar = () => {
         <div className='h-[90%] w-[28rem] flex justify-center items-center text-[#011627] font-medium font-sans text-xl'>
           Noyes Matriculation Higher Secondary School
         </div>
-        <div className='h-[80%] w-[50%] flex justify-center items-center gap-8 list-none'>
+        <div className='h-[80%] w-[50%] flex justify-center gap-3 items-center list-none'>
           {
             topic.map((data, index) => (
-              <NavLink key={index} to={data.url}>
-                <li>{data.title}</li>
+              <NavLink key={index} to={data.url} className="border-b-4 border-transparent">
+                <li className='hover:bg-slate-200 px-[0.5rem] py-[0.4rem] rounded-md'>{data.title}</li>
               </NavLink>
             ))
           }
         </div>
-        <div className='h-[80%] w-[10rem] flex justify-center items-center bg-[#ffc8dd] rounded-md ml-auto mr-5'>
-            <div className='text-[#011627] text-[20px] font-normal cursor-pointer flex items-center gap-1'>
+        <div className='h-[80%] w-[10rem] flex justify-center cursor-pointer items-center bg-[#ffc8dd] rounded-md ml-auto mr-5'>
+            <button className='text-[#011627] text-[20px] font-normal cursor-pointer flex items-center gap-1'>
                 Staff Login <ArrowRight size={20} /> 
-            </div>
+            </button>
         </div>
         
       </div>
